@@ -1,0 +1,133 @@
+@import "lite.scss";
+
+$spacing-xl: 24px;	$spacing-lg: 16px;	$spacing: 8px;	$spacing-sm: 4px;	$spacing-xs: 2px;
+$percent: 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100;
+
+@each $percentage in $percent {
+	.width-#{$percentage} {
+	    width: $percentage * 1%;
+	}
+
+	.height-#{$percentage} {
+	    height: $percentage * 1%;
+	}
+
+	.vw-#{$percentage} {
+	    width: #{$percentage}vw;
+	}
+
+	.vh-#{$percentage} {
+	    height: #{$percentage}vh;
+	}
+}
+
+$positions: top left bottom right;
+$measures: margin padding;
+
+@each $measure in $measures {
+	@each $position in $positions {
+		@each $percentage in $percent {
+			.#{$measure}-#{$position}-#{$percentage} {
+			    #{$measure}-#{$position}: $percentage * 1%;
+			}
+
+			.#{$measure}-#{$position}-#{$percentage} {
+			    #{$measure}-#{$position}: $percentage * 1%;
+			}
+
+			.#{$measure}-#{$position}-#{$percentage}vw {
+			    #{$measure}-#{$position}: #{$percentage}vw;
+			}
+
+			.#{$measure}-#{$position}-#{$percentage}vh {
+			    #{$measure}-#{$position}: #{$percentage}vh;
+			}
+		}
+
+		.no-#{$measure}-#{$position} {
+		    #{$measure}-#{$position}: 0;
+		}
+
+		.#{$measure}-#{$position}-xl {
+		    #{$measure}-#{$position}: $spacing-xl;
+		}
+
+		.#{$measure}-#{$position}-lg {
+		    #{$measure}-#{$position}: $spacing-lg;
+		}
+
+		.#{$measure}-#{$position} {
+		    #{$measure}-#{$position}: $spacing;
+		}
+
+		.#{$measure}-#{$position}-sm {
+		    #{$measure}-#{$position}: $spacing-sm;
+		}
+
+		.#{$measure}-#{$position}-xs {
+		    #{$measure}-#{$position}: $spacing-xs;
+		}
+	}
+
+	@each $percentage in $percent {
+		.#{$measure}-#{$percentage} {
+		    #{$measure}: $percentage * 1%;
+		}
+
+		.#{$measure}-#{$percentage} {
+		    #{$measure}: $percentage * 1%;
+		}
+
+		.#{$measure}-#{$percentage}vw {
+		    #{$measure}: #{$percentage}vw;
+		}
+
+		.#{$measure}-#{$percentage}vh {
+		    #{$measure}: #{$percentage}vh;
+		}
+
+		.horizontal-#{$measure} {
+		    #{$measure}-left: $percentage * 1%;
+		    #{$measure}-right: $percentage * 1%;
+		}
+
+		.vertical-#{$measure} {
+		    #{$measure}-top: $percentage * 1%;
+		    #{$measure}-bottom: $percentage * 1%;
+		}
+
+		.horizontal-#{$measure}vw {
+		    #{$measure}-left: #{$percentage}vw;
+		    #{$measure}-right: #{$percentage}vw;
+		}
+
+		.vertical-#{$measure}vh {
+		    #{$measure}-top: #{$percentage}vh;
+		    #{$measure}-bottom: #{$percentage}vh;
+		}
+	}
+
+	.no-#{$measure} {
+	    #{$measure}: 0;
+	}
+
+	.#{$measure}-xl {
+	    #{$measure}: $spacing-xl;
+	}
+
+	.#{$measure}-lg {
+	    #{$measure}: $spacing-lg;
+	}
+
+	.#{$measure} {
+	    #{$measure}: $spacing;
+	}
+
+	.#{$measure}-sm {
+	    #{$measure}: $spacing-sm;
+	}
+
+	.#{$measure}-xs {
+	    #{$measure}: $spacing-xs;
+	}
+}

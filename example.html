@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>commonCSS use example</title>
+        <meta name="commonCSS use example">
+
+        <link type="text/css" rel="stylesheet" href="full.css"/>
+        <style type="text/css">
+            body {
+                background: #BBB;
+                margin: 2.5vh;
+            }
+
+            .content {
+                background: #CCC;
+                width: 65vw;
+            }
+
+            .section > * {
+                background: #DDD;
+            }
+
+            .section > * > * {
+                background: #EEE;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="content centered centered-text">
+            <h1>commonCSS use example</h1>
+
+            <h2>Basic (lite)</h2>
+            <div class="section padding-xl">
+                <div class="centered width-50">.no-wrap</div>
+                <textarea class="display-block centered no-wrap" cols="35" rows="3">This is a long sentence not being wrapped</textarea>
+                <br>
+
+                <div class="centered padding border-box width-50">
+                    <div class="to-left width-30">.to-left</div>
+                    <br>
+                    <div class="centered width-30 inline-block">.centered</div>
+                    <br>
+                    <div class="to-right width-30">.to-right</div>
+                    <br>
+                </div>
+
+                <br>
+                <div class="centered padding border-box width-50">
+                    <div class="to-left width-30 text-to-left">.text-to-left</div>
+                    <br>
+                    <div class="centered width-30 centered-text inline-block">.inline-block</div>
+                    <br>
+                    <div class="to-right width-30 text-to-right">.text-to-right</div>
+                    <br>
+                </div>
+
+            </div>
+
+            <h2>Advanced sizing + layouting (full only)</h2>
+            <div class="section border-box vw-65 vh-95 horizontal-padding-5">
+                <div class="inline-block border-box width-25 height-90 padding-5">
+                    <div class="height-45 margin-bottom"></div>
+                    <div class="height-50"></div>
+                </div>
+
+                <div class="inline-block border-box width-15 height-90 padding-5">
+                    <div class="height-30 margin-bottom"></div>
+                    <div class="height-65"></div>
+                </div>
+
+                <div class="inline-block border-box width-40 height-90 padding-5">
+                    <div class="height-75"></div>
+                    <div class="height-20 margin-top"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
