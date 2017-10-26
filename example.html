@@ -1,78 +1,194 @@
 <html>
-    <head>
-        <title>commonCSS use example</title>
-        <meta name="commonCSS use example">
+  <head>
+    <title>commonCSS use example</title>
+    <meta name="commonCSS use example">
 
-        <link type="text/css" rel="stylesheet" href="full.css"/>
-        <style type="text/css">
-            body {
-                background: #BBB;
-                margin: 2.5vh;
-            }
+    <link type="text/css" rel="stylesheet" href="full.css"/>
+    <style type="text/css">
+      body {
+        background: #BBB;
+        margin: 2.5vh;
+      }
 
-            .content {
-                background: #CCC;
-                width: 65vw;
-            }
+      .content {
+        background: #CCC;
+      }
 
-            .section > * {
-                background: #DDD;
-            }
+      .section > * {
+        background: #DDD;
+      }
 
-            .section > * > * {
-                background: #EEE;
-            }
-        </style>
+      .section > * > * {
+        background: #EEE;
+      }
 
-    </head>
-    <body>
-        <div class="content centered centered-text">
-            <h1>commonCSS use example</h1>
+      .paddings-section {
+        padding: 24px;
+      }
 
-            <h2>Basic (lite)</h2>
-            <div class="section padding-xl">
-                <div class="centered width-50">.no-wrap</div>
-                <textarea class="display-block centered no-wrap" cols="35" rows="3">This is a long sentence not being wrapped</textarea>
-                <br>
+      .paddings-section div[class*="padding"] {
+        background: #bbd6af;
+        margin-bottom: 40px;
+      }
 
-                <div class="centered padding border-box width-50">
-                    <div class="to-left width-30">.to-left</div>
-                    <br>
-                    <div class="centered width-30 inline-block">.centered</div>
-                    <br>
-                    <div class="to-right width-30">.to-right</div>
-                    <br>
-                </div>
+      .paddings-section div[class*="padding"] .content {
+        border: 1px solid #BBB;
+      }
+    </style>
+  </head>
 
-                <br>
-                <div class="centered padding border-box width-50">
-                    <div class="to-left width-30 text-to-left">.text-to-left</div>
-                    <br>
-                    <div class="centered width-30 centered-text inline-block">.inline-block</div>
-                    <br>
-                    <div class="to-right width-30 text-to-right">.text-to-right</div>
-                    <br>
-                </div>
+  <body>
+    <div class="content centered text-center vw-65 padding-xl">
+      <h1>commonCSS use example</h1>
 
-            </div>
+      <h2 class="margin-top-m">Basic features (all versions)</h2>
+      <div class="section horizontal-padding-xl margin-bottom-xl">
 
-            <h2>Advanced sizing + layouting (full only)</h2>
-            <div class="section border-box vw-65 vh-95 horizontal-padding-5">
-                <div class="inline-block border-box width-25 height-90 padding-5">
-                    <div class="height-45 margin-bottom"></div>
-                    <div class="height-50"></div>
-                </div>
-
-                <div class="inline-block border-box width-15 height-90 padding-5">
-                    <div class="height-30 margin-bottom"></div>
-                    <div class="height-65"></div>
-                </div>
-
-                <div class="inline-block border-box width-40 height-90 padding-5">
-                    <div class="height-75"></div>
-                    <div class="height-20 margin-top"></div>
-                </div>
-            </div>
+        <!-- text alignment -->
+        <h3>Text Alignment</h3>
+        <div class="inline-block width-20 text-left">
+          .text-left
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at cumque deserunt dignissimos
+          distinctio dolor doloremque error eveniet laboriosam minima molestiae natus obcaecati perspiciatis,
+          repudiandae ullam.
         </div>
-    </body>
+        <div class="inline-block width-20 margin-left-5 text-center">
+          .text-center
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at cumque deserunt dignissimos
+          distinctio dolor doloremque error eveniet laboriosam minima molestiae natus obcaecati perspiciatis,
+          repudiandae ullam.
+        </div>
+        <div class="inline-block width-20 margin-left-5 text-right">
+          .text-right
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at cumque deserunt dignissimos
+          distinctio dolor doloremque error eveniet laboriosam minima molestiae natus obcaecati perspiciatis,
+          repudiandae ullam.
+        </div>
+        <div class="inline-block width-20 margin-left-5 text-justify">
+          .text-justify
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at cumque deserunt dignissimos
+          distinctio dolor doloremque error eveniet laboriosam minima molestiae natus obcaecati perspiciatis,
+          repudiandae ullam.
+        </div>
+
+        <!-- text transformation -->
+        <h3>Text Transformation</h3>
+        <p class="inline-block width-25 uppercase">
+          .uppercase
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at cumque deserunt dignissimos distinctio
+          dolor doloremque error eveniet laboriosam minima molestiae natus obcaecati perspiciatis, repudiandae ullam.
+
+        </p>
+        <p class="inline-block width-25 margin-left-5 lowercase">
+          .lowercase
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at cumque deserunt dignissimos distinctio
+          dolor doloremque error eveniet laboriosam minima molestiae natus obcaecati perspiciatis, repudiandae ullam.
+
+        </p>
+        <p class="inline-block width-25 margin-left-5 capitalize">
+          .capitalize
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at cumque deserunt dignissimos distinctio
+          dolor doloremque error eveniet laboriosam minima molestiae natus obcaecati perspiciatis, repudiandae ullam.
+
+        </p>
+
+        <!-- float -->
+        <h3>Content Floating</h3>
+        <div class="centered padding border-box width-50">
+          <div class="pull-left width-30">
+            .pull-left
+          </div>
+          <br>
+          <div class="centered width-30 inline-block">
+            .centered
+          </div>
+          <br>
+          <div class="pull-right width-30">
+            .pull-right
+          </div>
+          <br>
+        </div>
+
+      </div>
+
+      <!-- padding and margin -->
+      <h2>Padding and margin (extended / full versions only)</h2>
+      <div class="section horizontal-padding-5 margin-bottom-xl">
+        <div class="paddings-section">
+          <div class="padding-m">
+            <div class="content">
+              .padding-m
+            </div>
+          </div>
+          <div class="padding-top-m">
+            <div class="content">
+              .padding-top-m
+            </div>
+          </div>
+          <div class="padding-left-m">
+            <div class="content">
+              .padding-left-m
+            </div>
+          </div>
+          <div class="padding-right-m">
+            <div class="content">
+              .padding-right-m
+            </div>
+          </div>
+          <div class="padding-bottom-m">
+            <div class="content">
+              .padding-bottom-m
+            </div>
+          </div>
+          <div class="vertical-padding-m">
+            <div class="content">
+              .vertical-padding-m
+            </div>
+          </div>
+          <div class="horizontal-padding-m">
+            <div class="content">
+              .horizontal-padding-m
+            </div>
+          </div>
+          <div class="no-padding">
+            <div class="content">
+              .no-padding
+            </div>
+          </div>
+        </div>
+
+        <div class="margin-top-m">
+          Sizes: xxxs (4px), xxs (8px), xs (16px), s (24px), m (32px), l (48px), xl (64px), xxl (96px), xxxl (128px)
+        </div>
+      </div>
+
+      <!-- sizing -->
+      <h2>Percentage sizing + layouting (full version only)</h2>
+      <div class="section border-box vw-65 vh-95 horizontal-padding-5">
+        <div class="inline-block border-box width-25 height-90 padding-5">
+          <div class="height-45 margin-bottom"></div>
+          <div class="height-50"></div>
+        </div>
+
+        <div class="inline-block border-box width-15 height-60 padding-5">
+          <div class="height-30 margin-bottom"></div>
+          <div class="height-65"></div>
+        </div>
+
+        <div class="inline-block border-box width-40 height-80 padding-5">
+          <div class="height-75"></div>
+          <div class="height-20 margin-top"></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+
 </html>
