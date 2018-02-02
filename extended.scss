@@ -26,17 +26,17 @@ $spacings: (
 
     /* general */
     .#{$measure}-#{$spacing} {
-      #{$measure}: $value;
+      #{$measure}: #{$value}px;
     }
 
     /* bidirectional */
     .horizontal-#{$measure}-#{$spacing} {
-      #{$measure}-left: $value;
-      #{$measure}-right: $value;
+      #{$measure}-left: #{$value}px;
+      #{$measure}-right: #{$value}px;
     }
     .vertical-#{$measure}-#{$spacing} {
-      #{$measure}-top: $value;
-      #{$measure}-bottom: $value;
+      #{$measure}-top: #{$value}px;
+      #{$measure}-bottom: #{$value}px;
     }
   }
 }
