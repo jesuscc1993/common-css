@@ -1,42 +1,32 @@
 @import "lite.scss";
+@import "variables.scss";
 
 $positions: top left bottom right;
 $measures: margin padding;
-$spacings: (
-    xxxs: 4,
-    xxs: 8,
-    xs: 16,
-    s: 24,
-    m: 32,
-    l: 48,
-    xl: 64,
-    xxl: 96,
-    xxxl: 128
-);
 
-/* spacing by pixels */
+/* spacing by units */
 @each $measure in $measures {
   @each $spacing, $value in $spacings {
     /* by position */
     @each $position in $positions {
       .#{$measure}-#{$position}-#{$spacing} {
-        #{$measure}-#{$position}: #{$value}px;
+        #{$measure}-#{$position}: $value;
       }
     }
 
     /* general */
     .#{$measure}-#{$spacing} {
-      #{$measure}: #{$value}px;
+      #{$measure}: $value;
     }
 
     /* bidirectional */
     .horizontal-#{$measure}-#{$spacing} {
-      #{$measure}-left: #{$value}px;
-      #{$measure}-right: #{$value}px;
+      #{$measure}-left: $value;
+      #{$measure}-right: $value;
     }
     .vertical-#{$measure}-#{$spacing} {
-      #{$measure}-top: #{$value}px;
-      #{$measure}-bottom: #{$value}px;
+      #{$measure}-top: $value;
+      #{$measure}-bottom: $value;
     }
   }
 }
