@@ -46,22 +46,22 @@ $spacings: (
   /* by position */
   @each $position in $positions {
     .no-#{$measure}-#{$position} {
-      #{$measure}-#{$position}: 0;
+      #{$measure}-#{$position}: 0 !important;
     }
   }
 
   /* general */
   .no-#{$measure} {
-    #{$measure}: 0;
+    #{$measure}: 0 !important;
   }
 
   /* bidirectional */
   .no-horizontal-#{$measure} {
-    #{$measure}-left: 0;
-    #{$measure}-right: 0;
+    #{$measure}-left: 0 !important;
+    #{$measure}-right: 0 !important;
   }
   .no-vertical-#{$measure} {
-    #{$measure}-top: 0;
-    #{$measure}-bottom: 0;
+    #{$measure}-top: 0 !important;
+    #{$measure}-bottom: 0 !important;
   }
 }
