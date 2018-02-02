@@ -14,13 +14,13 @@ $spacings: (
     xxxl: 128
 );
 
-/* spacing by units */
+/* spacing by pixels */
 @each $measure in $measures {
   @each $spacing, $value in $spacings {
     /* by position */
     @each $position in $positions {
       .#{$measure}-#{$position}-#{$spacing} {
-        #{$measure}-#{$position}: $value;
+        #{$measure}-#{$position}: #{$value}px;
       }
     }
 
